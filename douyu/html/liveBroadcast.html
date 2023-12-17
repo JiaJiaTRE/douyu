@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>斗鱼吃鸡赛事直播</title>
+    <script src="../font/iconfont.js"></script>
+    <script src="../js/liveBroadcast.js"></script>
+    <link rel="stylesheet" href="../css/liveBroadcast.css">
+</head>
+
+<body>
+    <div id="videoBox" class="videoBox">
+        <video id="videoImg"
+            src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+            autoplay="autoplay" loop="loop" controls="controls"
+            poster="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"></video>
+        <div id="videoData" class="videoData">
+            <span onclick="click_index()">
+                < </span>
+                    <span>【2023PGC】重播</span>
+                    <span>超清</span>
+                    <span>...</span>
+        </div>
+    </div>
+
+    <div class="tabTitile">
+        <span id="chatText" onclick="click_chat()">聊天<div id="chatLine"></div></span>
+        <span id="videoText" onclick="click_video()">视频<div id="videoLine"></div></span>
+        <span id="diamondText" onclick="click_diamond()">钻粉<div id="diamondLine"></div></span>
+        <span>热议<div></div></span>
+        <div>
+            <img src="https://apic.douyucdn.cn/upload/avatar_v3/202311/bf242ad9d9304527a16c8b519c887f2b_middle.jpg"
+                alt="">
+            <span>贵宾</span>
+            <span>196</span>
+            <span>+ 关注</span>
+            <span>441.8万</span>
+        </div>
+    </div>
+    <!-- tab聊天 -->
+    <div id="tabChat" class="tabChat">
+        <div class="tabadvertisement">
+            <img src="../img/tabadvertisement.jpg" alt="">
+        </div>
+        <div class="barrage">
+            <div>
+                <span class="grade">LV39</span>
+                <span class="kind">
+                    <span>27</span>
+                    <span>33up</span>
+                </span>
+                <span class="name">时时如意呀 ：</span>
+                <span class="text">哈哈哈哈哈哈哈哈哈</span>
+            </div>
+            <div>
+                <span class="grade">LV36</span>
+                <span id="otherKind" class="kind">
+                    <span>19</span>
+                    <span>小非棍</span>
+                </span>
+                <span class="name">蒙塔基、钢蛋OvO：</span>
+                <span class="text">斗鱼吃鸡赛事、、</span>
+            </div>
+            <div>
+                <span id="smallGrade" class="grade">LV26</span>
+                <span class="name">德楞、旺旺 ：</span>
+                <span class="text">PGC！！！</span>
+            </div>
+        </div>
+
+        <div class="prompt">
+            欢迎来到直播间！斗鱼禁止未成年人直播或打赏，24小时巡查违法违规内容，如低俗色情、赌博、诈骗等。谨慎判断直播中主播不正当诱导打赏或私下交易行为。切勿轻信招聘征婚、代练代抽、购买礼包码等广告信息，谨慎网络诈骗。
+        </div>
+        <div class="inputBox">
+            <input type="text" placeholder="梗弹幕玩法火爆上线">
+            <div>
+                <img src="../img/interaction.jpg" alt="">
+                <div>互动</div>
+            </div>
+            <img src="../img/gift.jpg" alt="">
+        </div>
+        <!-- 悬浮图标 -->
+        <div id="floating-icons" class="floating-icons">
+            <div>
+                <img src="../img/floating-img.jpg" alt="">
+                <div>随机立减</div>
+                <div onclick="hide_floatingIcon()">x</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tab视频 -->
+    <div id="tabVideo" class="tabVideo">
+        <div class="smallTab">
+            <span id="comprehensive" onclick="click_comprehensive()">综合</span>
+            <span id="contribute" onclick="click_contribute()">主播投稿</span>
+            <span id="live" onclick="click_live()">直播回看</span>
+        </div>
+
+        <!-- smallTab综合 -->
+        <div id="smallTabComprehensive" class="smallTabComprehensive">
+            <div class="smallTabComprehensive-one">
+                <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="smallTabComprehensive-data">
+                    <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                    <div class="smallTabComprehensive-name">
+                        <span>UP</span>
+                        <span>斗鱼吃鸡赛事</span>
+                    </div>
+                    <div class="smallTabComprehensive-num">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shipin-copy"></use>
+                        </svg>
+                        <span class="video-num">9.5万</span>
+                        <svg id="video-icon-two" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-danmushu-copy"></use>
+                        </svg>
+                        <span class="video-data">5390</span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="smallTabComprehensive-two">
+                <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="smallTabComprehensive-data">
+                    <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                    <div class="smallTabComprehensive-name">
+                        <span>UP</span>
+                        <span>斗鱼吃鸡赛事</span>
+                    </div>
+                    <div class="smallTabComprehensive-num">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shipin-copy"></use>
+                        </svg>
+                        <span class="video-num">9.5万</span>
+                        <svg id="video-icon-two" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-danmushu-copy"></use>
+                        </svg>
+                        <span class="video-data">5390</span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="smallTabComprehensive-three">
+                <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="smallTabComprehensive-data">
+                    <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                    <div class="smallTabComprehensive-name">
+                        <span>UP</span>
+                        <span>斗鱼吃鸡赛事</span>
+                    </div>
+                    <div class="smallTabComprehensive-num">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shipin-copy"></use>
+                        </svg>
+                        <span class="video-num">9.5万</span>
+                        <svg id="video-icon-two" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-danmushu-copy"></use>
+                        </svg>
+                        <span class="video-data">5390</span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="smallTabComprehensive-four">
+                <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="smallTabComprehensive-data">
+                    <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                    <div class="smallTabComprehensive-name">
+                        <span>UP</span>
+                        <span>斗鱼吃鸡赛事</span>
+                    </div>
+                    <div class="smallTabComprehensive-num">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shipin-copy"></use>
+                        </svg>
+                        <span class="video-num">9.5万</span>
+                        <svg id="video-icon-two" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-danmushu-copy"></use>
+                        </svg>
+                        <span class="video-data">5390</span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="smallTabComprehensive-five">
+                <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="smallTabComprehensive-data">
+                    <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                    <div class="smallTabComprehensive-name">
+                        <span>UP</span>
+                        <span>斗鱼吃鸡赛事</span>
+                    </div>
+                    <div class="smallTabComprehensive-num">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shipin-copy"></use>
+                        </svg>
+                        <span class="video-num">9.5万</span>
+                        <svg id="video-icon-two" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-danmushu-copy"></use>
+                        </svg>
+                        <span class="video-data">5390</span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="smallTabComprehensive-six">
+                <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="smallTabComprehensive-data">
+                    <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                    <div class="smallTabComprehensive-name">
+                        <span>UP</span>
+                        <span>斗鱼吃鸡赛事</span>
+                    </div>
+                    <div class="smallTabComprehensive-num">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shipin-copy"></use>
+                        </svg>
+                        <span class="video-num">9.5万</span>
+                        <svg id="video-icon-two" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-danmushu-copy"></use>
+                        </svg>
+                        <span class="video-data">5390</span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="smallTabComprehensive-seven">
+                <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="smallTabComprehensive-data">
+                    <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                    <div class="smallTabComprehensive-name">
+                        <span>UP</span>
+                        <span>斗鱼吃鸡赛事</span>
+                    </div>
+                    <div class="smallTabComprehensive-num">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shipin-copy"></use>
+                        </svg>
+                        <span class="video-num">9.5万</span>
+                        <svg id="video-icon-two" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-danmushu-copy"></use>
+                        </svg>
+                        <span class="video-data">5390</span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gengduo-shuxiang"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- smallTab主播投稿 -->
+        <div id="smallTabContribute" class="smallTabContribute">
+            <div class="smallTabContribute-num">
+                <span>共</span>
+                <span>5413</span>
+                <span>个视频</span>
+                <img src="../img/smallTabContribute.jpg" alt="">
+                <span>最新发布</span>
+            </div>
+            <div class="smallTabContribute-video">
+                <div class="smallTabComprehensive-one">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div class="smallTabComprehensive-data">
+                        <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                        <div class="smallTabComprehensive-name">
+                            <span>UP</span>
+                            <span>斗鱼吃鸡赛事</span>
+                        </div>
+                        <div class="smallTabComprehensive-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin-copy"></use>
+                            </svg>
+                            <span class="video-num">9.5万</span>
+                            <svg id="video-icon-two" class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-danmushu-copy"></use>
+                            </svg>
+                            <span class="video-data">5390</span>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallTabComprehensive-two">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div class="smallTabComprehensive-data">
+                        <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                        <div class="smallTabComprehensive-name">
+                            <span>UP</span>
+                            <span>斗鱼吃鸡赛事</span>
+                        </div>
+                        <div class="smallTabComprehensive-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin-copy"></use>
+                            </svg>
+                            <span class="video-num">9.5万</span>
+                            <svg id="video-icon-two" class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-danmushu-copy"></use>
+                            </svg>
+                            <span class="video-data">5390</span>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallTabComprehensive-three">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div class="smallTabComprehensive-data">
+                        <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                        <div class="smallTabComprehensive-name">
+                            <span>UP</span>
+                            <span>斗鱼吃鸡赛事</span>
+                        </div>
+                        <div class="smallTabComprehensive-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin-copy"></use>
+                            </svg>
+                            <span class="video-num">9.5万</span>
+                            <svg id="video-icon-two" class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-danmushu-copy"></use>
+                            </svg>
+                            <span class="video-data">5390</span>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallTabComprehensive-four">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div class="smallTabComprehensive-data">
+                        <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                        <div class="smallTabComprehensive-name">
+                            <span>UP</span>
+                            <span>斗鱼吃鸡赛事</span>
+                        </div>
+                        <div class="smallTabComprehensive-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin-copy"></use>
+                            </svg>
+                            <span class="video-num">9.5万</span>
+                            <svg id="video-icon-two" class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-danmushu-copy"></use>
+                            </svg>
+                            <span class="video-data">5390</span>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallTabComprehensive-five">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div class="smallTabComprehensive-data">
+                        <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                        <div class="smallTabComprehensive-name">
+                            <span>UP</span>
+                            <span>斗鱼吃鸡赛事</span>
+                        </div>
+                        <div class="smallTabComprehensive-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin-copy"></use>
+                            </svg>
+                            <span class="video-num">9.5万</span>
+                            <svg id="video-icon-two" class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-danmushu-copy"></use>
+                            </svg>
+                            <span class="video-data">5390</span>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallTabComprehensive-six">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div class="smallTabComprehensive-data">
+                        <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                        <div class="smallTabComprehensive-name">
+                            <span>UP</span>
+                            <span>斗鱼吃鸡赛事</span>
+                        </div>
+                        <div class="smallTabComprehensive-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin-copy"></use>
+                            </svg>
+                            <span class="video-num">9.5万</span>
+                            <svg id="video-icon-two" class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-danmushu-copy"></use>
+                            </svg>
+                            <span class="video-data">5390</span>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallTabComprehensive-seven">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div class="smallTabComprehensive-data">
+                        <div>【2023PGC全球总决赛】11.23 败者组DAY1 R3</div>
+                        <div class="smallTabComprehensive-name">
+                            <span>UP</span>
+                            <span>斗鱼吃鸡赛事</span>
+                        </div>
+                        <div class="smallTabComprehensive-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shipin-copy"></use>
+                            </svg>
+                            <span class="video-num">9.5万</span>
+                            <svg id="video-icon-two" class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-danmushu-copy"></use>
+                            </svg>
+                            <span class="video-data">5390</span>
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gengduo-shuxiang"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- smallTab直播回看 -->
+        <div id="smallTabLive" class="smallTabLive">
+            <div class="smallTabLive-button">
+                <span>最新</span>
+                <span>日期</span>
+            </div>
+            <div class="smallTabLive-num">
+                <div>
+                    <div></div>
+                    <span>4-5</span>
+                </div>
+                <div>15:27</div>
+                <div>【BOSS训练营】4.7 18点开赛</div>
+                <div class="smallTabLive-img">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div>完整录像</div>
+                    <div>5771:21:59</div>
+                </div>
+            </div>
+            <div class="smallTabLive-num">
+                <div>
+                    <div></div>
+                    <span>4-5</span>
+                </div>
+                <div>15:27</div>
+                <div>【BOSS训练营】4.7 18点开赛</div>
+                <div class="smallTabLive-img">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div>完整录像</div>
+                    <div>5771:21:59</div>
+                </div>
+            </div>
+            <div class="smallTabLive-num">
+                <div>
+                    <div></div>
+                    <span>4-5</span>
+                </div>
+                <div>15:27</div>
+                <div>【BOSS训练营】4.7 18点开赛</div>
+                <div class="smallTabLive-img">
+                    <img src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                        alt="">
+                    <div>完整录像</div>
+                    <div>5771:21:59</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- tab钻粉 -->
+    <div id="tabDiamond" class="tabDiamond">
+        <div class="smallsmallTab">
+            <span id="list" onclick="click_list()">钻粉榜</span>
+            <span id="home" onclick="click_home()">粉丝家园</span>
+        </div>
+
+        <!-- smallTab钻粉榜 -->
+        <div id="smallTabList" class="smallTabList">
+            <div class="tabDiamond-center">
+                <span>
+                    斗鱼严禁未成年人打赏充值
+                </span>
+            </div>
+            <img src="../img/tabDiamond.jpg" alt="">
+            <div class="tabDiamond-bottom">
+                <span>您还未成为钻粉</span>
+                <span>钻石粉丝：0</span>
+                <span>成为钻粉</span>
+            </div>
+        </div>
+
+        <!-- smallTab粉丝家园 -->
+        <div id="smallTabHome" class="smallTabHome">
+            <div class="tabDiamond-center">
+                <span>斗鱼严禁未成年人打赏充值</span>
+                <span>主播的粉丝家园 ></span>
+            </div>
+            <!-- 真爱守护者 -->
+            <div class="tabDiamond-TrueLove">
+                <div class="tabDiamond-TrueLove-title">
+                    <span>真爱守护者</span>
+                    <span>今日助力值TOP5</span>
+                </div>
+                <div class="tabDiamond-TrueLove-data">
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avanew/face/201805/1b4226f695a4a561b24cbc0ac225de60_middle.jpg"
+                            alt="">
+                        <div>小小</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202310/b30d829fea164d2481568e605db2c0f3_middle.jpg"
+                            alt="">
+                        <div>陈东</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/201904/a5ada7c8351e4bfcb6e18a45ce3a76db_middle.jpg"
+                            alt="">
+                        <div>AJaezz</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202111/bb49b38d701f4f44973d0e40937aab49_middle.jpg"
+                            alt="">
+                        <div>MG7718</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202011/1db71a638c23434d92fe4996a0315f08_middle.jpg"
+                            alt="">
+                        <div>迷迭xXx</div>
+                    </div>
+                </div>
+            </div>
+            <div id="companion" class="tabDiamond-TrueLove">
+                <div class="tabDiamond-TrueLove-title">
+                    <span>亲密的同伴</span>
+                    <span>本周朝夕书打卡次数TOP5</span>
+                </div>
+                <div class="tabDiamond-TrueLove-data">
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avanew/face/201805/1b4226f695a4a561b24cbc0ac225de60_middle.jpg"
+                            alt="">
+                        <div>小小</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202310/b30d829fea164d2481568e605db2c0f3_middle.jpg"
+                            alt="">
+                        <div>陈东</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/201904/a5ada7c8351e4bfcb6e18a45ce3a76db_middle.jpg"
+                            alt="">
+                        <div>AJaezz</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202111/bb49b38d701f4f44973d0e40937aab49_middle.jpg"
+                            alt="">
+                        <div>MG7718</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202011/1db71a638c23434d92fe4996a0315f08_middle.jpg"
+                            alt="">
+                        <div>迷迭xXx</div>
+                    </div>
+                </div>
+            </div>
+            <div id="thank" class="tabDiamond-TrueLove">
+                <div class="tabDiamond-TrueLove-title">
+                    <span>谢谢你陪我</span>
+                    <span>本周观看时长TOP5</span>
+                </div>
+                <div class="tabDiamond-TrueLove-data">
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avanew/face/201805/1b4226f695a4a561b24cbc0ac225de60_middle.jpg"
+                            alt="">
+                        <div>小小</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202310/b30d829fea164d2481568e605db2c0f3_middle.jpg"
+                            alt="">
+                        <div>陈东</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/201904/a5ada7c8351e4bfcb6e18a45ce3a76db_middle.jpg"
+                            alt="">
+                        <div>AJaezz</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202111/bb49b38d701f4f44973d0e40937aab49_middle.jpg"
+                            alt="">
+                        <div>MG7718</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202011/1db71a638c23434d92fe4996a0315f08_middle.jpg"
+                            alt="">
+                        <div>迷迭xXx</div>
+                    </div>
+                </div>
+            </div>
+            <div id="close" class="tabDiamond-TrueLove">
+                <div class="tabDiamond-TrueLove-title">
+                    <span>粉丝亲密度总榜</span>
+                    <span>本周粉丝榜TOP5</span>
+                </div>
+                <div class="tabDiamond-TrueLove-data">
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avanew/face/201805/1b4226f695a4a561b24cbc0ac225de60_middle.jpg"
+                            alt="">
+                        <div>小小</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202310/b30d829fea164d2481568e605db2c0f3_middle.jpg"
+                            alt="">
+                        <div>陈东</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/201904/a5ada7c8351e4bfcb6e18a45ce3a76db_middle.jpg"
+                            alt="">
+                        <div>AJaezz</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202111/bb49b38d701f4f44973d0e40937aab49_middle.jpg"
+                            alt="">
+                        <div>MG7718</div>
+                    </div>
+                    <div>
+                        <img src="https://apic.douyucdn.cn/upload/avatar_v3/202011/1db71a638c23434d92fe4996a0315f08_middle.jpg"
+                            alt="">
+                        <div>迷迭xXx</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

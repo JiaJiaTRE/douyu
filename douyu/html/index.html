@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斗鱼首页</title>
+    <script src="../font/iconfont.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <!-- 上导航栏 -->
+    <div class="navigation-top">
+        <span>推荐</span>
+        <span onclick="click_popularVideos()">视频</span>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-youxi1"></use>
+        </svg>
+        <span>游戏</span>
+        <span class="redCircular"></span>
+    </div>
+
+    <!-- 搜索栏 -->
+    <div class="searchBar">
+        <!-- 消息 -->
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-xinxi"></use>
+        </svg>
+        <!-- 消息数 -->
+        <span class="redCircular">1</span>
+        <!-- 搜索栏 -->
+        <div>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-fangdajing"></use>
+            </svg>
+            <!-- 搜索框 -->
+            <input type="text" placeholder="波靈bolin | tu1rbo | 热门游戏">
+        </div>
+        <!-- 添加 -->
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tianjia"></use>
+        </svg>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="banner-container">
+        <!-- 轮播图片 -->
+        <ul class="banner-container-imgList">
+            <li>
+                <img src="../img/bannerImg-one.jpg" alt="">
+            </li>
+            <li>
+                <img src="../img/bannerImg-two.jpg" alt="">
+            </li>
+            <li>
+                <img src="../img/bannerImg-three.jpg" alt="">
+            </li>
+            <li>
+                <img src="../img/bannerImg-four.jpg" alt="">
+            </li>
+            <li>
+                <img src="../img/bannerImg-five.jpg" alt="">
+            </li>
+            <li>
+                <img src="../img/bannerImg-six.jpg" alt="">
+            </li>
+        </ul>
+        <!-- 导航按钮 -->
+        <div class="banner-container-circle"> </div>
+    </div>
+
+    <!-- 分类导航栏 -->
+    <div id="navigation-center" class="navigation-center">
+        <div id="navigation-center-img" class="navigation-center-img">
+            <!-- 第一层 -->
+            <div>
+                <img src="../img/navigation-one.jpg" alt="">
+                <div>全部分类</div>
+            </div>
+            <div>
+                <img src="../img/navigation-two.jpg" alt="">
+                <div>娱乐推荐</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/0d96d63ee9550728acd899d66eee3625.png" alt="">
+                <div>王者荣耀</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/de31e9d475fdbdde59d3f0c4364f06f7.png" alt="">
+                <div>穿越火线</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/e8d2f2deca2025ec12874d6d6792489a.png" alt="">
+                <div>热门游戏</div>
+            </div>
+
+            <!-- 第二层 -->
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/c0f6c4746299fea448a186610f51bbe5.png" alt="">
+                <div>星势力</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/2ff701f9620bb601bcc9043dd4e760d7.png" alt="">
+                <div>LOL手游</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/2bf962e7e048f13e354812cbd8c76594.png" alt="">
+                <div>崩坏：星穹铁道</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/2e6cd09d6a56d8dbf8ed7a7d3a607778.png" alt="">
+                <div>逆水寒手游</div>
+            </div>
+            <div>
+                <img src="https://cs-op.douyucdn.cn/dycatr/game_cate/602c38f19a4fe9af40fdb64a00ce9ed5.jpg" alt="">
+                <div>主机游戏</div>
+            </div>
+
+            <!-- 第三层 -->
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/8560eb4cba9e734a0d7408f6a9b9efb8.png" alt="">
+                <div>和平精英</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/107001569adb35d0daafe7febdeca135.png" alt="">
+                <div>刺客信条:英灵殿</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/2305358d1f547bc295c2b886892192e2.png" alt="">
+                <div>暗区突围</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/fa0d1d86a8a5b892041cda4203b45efe.png" alt="">
+                <div>蛋仔派对</div>
+            </div>
+            <div>
+                <img src="https://sta-op.douyucdn.cn/dycatr/4cab520503fc20f7b831275715d2a7ef.png" alt="">
+                <div>高能英雄</div>
+            </div>
+        </div>
+    </div>
+    <!-- 视频 -->
+    <div class="video1">
+        <div class="video-left" onclick="click_liveBroadcast()">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">斗鱼吃鸡赛事</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">162.7万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【2023PGC】最后机会重播
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">斗鱼吃鸡官方赛事</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/05/bd000fb550cf0836cf9ac7e516ca7cec.png/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">永劫无间</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">256.5万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                2023J Cup单排小组赛 A/B组
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">永劫无间官方直播间</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/22/c2d21cee6a782505eec8db96103a416c.png/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">英雄联盟手游赛事</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">202.0万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【重播】WRLA2亚洲联赛
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">LOL手游</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/roomCover/2023/11/21/a7b46b8eb6c7c8aedce98978cdfe4363.png/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">阿涛皎月Carry</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">225.2万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                国服前10心之刚教学！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">金牌整活大师</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/roomCove_coverUpdate_2023-07-25_3938b271052ed0344e9d86804fc580ba.jpg/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">eStarPro清融丶</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">221.4万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                巅峰赛专注专注专注
+            </div>
+            <div class="video-three">
+                <div class="video-nokind">
+                    <span>王者荣耀</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/28/cdacb9921bff36775f3aadc127f66669.png/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">王纪超666</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">230.0万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                3赛季峡谷单排国服第一
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">金牌整活大师</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/36252_src_1559.avif/webpdy2"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">MrGemini</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">486.2万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                Gemini：我来了！！！！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">KPL四冠教练</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/2947432_src_1559.avif/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">呆妹儿小霸王</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">348.8万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【黄金3倍】今天一个赞加粉丝团
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">年度最佳吃鸡主播</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/606118_src_1559.avif/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">芜湖大司马丶</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">327.4万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                二台壮壮下午只狼速通
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">金牌讲师</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/24422_src_1559.avif/webpdy2"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">pigff</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">305.9万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【PIGFF】PGC！tyloo加油！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">TYLOO战队主理人</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/2140364_src_1613.avif/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">小铭XiaoMing阿</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">159.1万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                小铭：双倍亲密度！！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">锦鲤杯三排总冠军</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/27/1105d9ff033e7f77b4c7e18472e71e85.jpg/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">迅哥丶雨霖铃</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">135.0万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                第一个王者！双倍！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">TOC4全国、全球总冠军</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/22/c2d21cee6a782505eec8db96103a416c.png/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">英雄联盟手游赛事</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">202.0万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【重播】WRLA2亚洲联赛
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">LOL手游</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/05/bd000fb550cf0836cf9ac7e516ca7cec.png/dy1"
+                    alt="">
+                    
+                <div class="video-two">
+                    <span class="video-name">永劫无间</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">256.5万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                2023J Cup单排小组赛 A/B组
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">永劫无间官方直播间</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/10/9895cc926a5956ee92e3449553a8d79f.png/webpdy2"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">斗鱼吃鸡赛事</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">162.7万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【2023PGC】最后机会重播
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">斗鱼吃鸡官方赛事</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/roomCover/2023/11/21/a7b46b8eb6c7c8aedce98978cdfe4363.png/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">阿涛皎月Carry</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">225.2万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                国服前10心之刚教学！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">金牌整活大师</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/roomCove_coverUpdate_2023-07-25_3938b271052ed0344e9d86804fc580ba.jpg/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">eStarPro清融丶</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">221.4万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                巅峰赛专注专注专注
+            </div>
+            <div class="video-three">
+                <div class="video-nokind">
+                    <span>王者荣耀</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/28/cdacb9921bff36775f3aadc127f66669.png/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">王纪超666</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">230.0万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                3赛季峡谷单排国服第一
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">金牌整活大师</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/36252_src_1559.avif/webpdy2"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">MrGemini</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">486.2万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                Gemini：我来了！！！！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">KPL四冠教练</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/2947432_src_1559.avif/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">呆妹儿小霸王</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">348.8万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【黄金3倍】今天一个赞加粉丝团
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">年度最佳吃鸡主播</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/606118_src_1559.avif/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">芜湖大司马丶</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">327.4万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                二台壮壮下午只狼速通
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">金牌讲师</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/24422_src_1559.avif/webpdy2"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">pigff</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">305.9万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                【PIGFF】PGC！tyloo加油！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">TYLOO战队主理人</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="video1" id="video-bottom">
+        <div class="video-left">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/asrpic/231128/2140364_src_1613.avif/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">小铭XiaoMing阿</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">159.1万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                小铭：双倍亲密度！！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">锦鲤杯三排总冠军</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="video-right">
+            <div class="video-one">
+                <img class="video-img"
+                    src="https://rpic.douyucdn.cn/live-cover/coverupdate/2023/11/27/1105d9ff033e7f77b4c7e18472e71e85.jpg/dy1"
+                    alt="">
+                <div class="video-two">
+                    <span class="video-name">迅哥丶雨霖铃</span>
+                    <div>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-huo"></use>
+                        </svg>
+                        <span class="video-num">135.0万</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-title">
+                第一个王者！双倍！
+            </div>
+            <div class="video-three">
+                <div class="video-four">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vip5"></use>
+                    </svg>
+                    <span class="video-kind">TOC4全国、全球总冠军</span>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-gengduo-shuxiang"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- 悬浮图标 -->
+    <div class="floating-icons">
+        <img src="../img/floating-icon.jpg" alt="">
+    </div>
+
+    <!-- 下导航栏 -->
+    <div class="navigation-bottom">
+        <nav class="bnav">
+            <ul>
+                <li>
+                    <a href="#" class="navigation-bottom-icon-selected">
+                        <img class="icon" src="../img/homePage-selected.jpg" alt="">
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xingqiu"></use>
+                        </svg>
+                        <p>动态</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="navigation-bottom-icon-bgcolor" class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-jiahao"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xiaoxi_o"></use>
+                        </svg>
+                        <p>聊天</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../html/personalCenter.html">
+                        <img class="icon" src="../img/my.jpg" alt="">
+                        <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
